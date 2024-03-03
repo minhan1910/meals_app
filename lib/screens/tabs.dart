@@ -18,10 +18,10 @@ class TabsScreen extends ConsumerStatefulWidget {
 class _TabsScreenState extends ConsumerState<TabsScreen> {
   int _selectedPageIndex = 0;
 
-  void _selectScreen(String identifier) async {
+  void _selectScreen(String identifier) {
     Navigator.of(context).pop();
     if (identifier == 'filters') {
-      await Navigator.of(context).push<Map<Filter, bool>>(
+      Navigator.of(context).push<Map<Filter, bool>>(
         MaterialPageRoute(
           builder: (ctx) => const FiltersScreen(),
         ),
